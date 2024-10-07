@@ -1,0 +1,112 @@
+*{
+    --main-color: #000000;
+    --main-dark-color: #ffffff;
+
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--main-color);
+    margin: 0px;
+}
+
+body{
+    margin: 0;
+}
+
+.flexbox{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+/* Headings & Text */
+h1, h2, h3, h4, h5, h6{
+    font-family: "Montserrat", system-ui;
+    letter-spacing: 0.2rem;
+    font-weight: 500;
+    line-height: 1.2em;
+}
+h1{
+    font-size: 2.75rem;
+}
+h2{
+    font-size: 2.5rem;
+}
+h3{
+    font-size: 2.25rem;
+}
+h4{
+    font-size: 2rem;
+}
+h5{
+    font-size: 1.75rem;
+}
+h6{
+    font-size: 1.5rem;
+}
+
+.dark-bg *{
+    color: var(--main-dark-color);
+}
+
+/* Buttons */
+button{
+    text-transform: uppercase;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1.5px solid var(--main-color);
+    margin: 20px 0px;
+    cursor: pointer;
+
+    transition: all 0.5s ease-in-out;
+}
+
+button:hover{
+    background-color: var(--main-color);
+}
+
+button.dark-bg{
+    border-color: var(--main-dark-color);
+}
+button.dark-bg:hover, button.dark-bg:active, button.dark-bg:focus{
+    background-color: var(--main-dark-color);
+    color: var(--main-color);
+}
+
+/* Hero Section */
+#hero{
+    justify-content: flex-end;
+    align-items: center;
+    align-content: flex-end;
+
+    width: 80%;
+    margin: auto;
+    
+    height: 80vh;
+}
+
+#hero video{
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#hero h1, #hero h3{
+    text-align: center;
+}
+
+#hero h1#logo{
+    font-size: 5rem;
+    margin-bottom: 0px;
+}
+
+/* Testimonials Section */
+#testimonials{
+    justify-content: flex-end;
+    align-items: center;
+    align-content: flex-end;
+}
