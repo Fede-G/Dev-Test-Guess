@@ -10,6 +10,8 @@
 
     --default-inner-column-perc: 80%;
 
+    position: relative;
+
     font-family: "Crimson Text", serif;
     font-weight: 400;
     font-style: normal;
@@ -79,12 +81,14 @@ button{
     border: 1.5px solid var(--main-color);
     margin: var(--default-space) 0px;
     cursor: pointer;
+    max-width: 20vw;
 
     transition: all 0.5s ease-in-out;
 }
 
 button:hover{
     background-color: var(--main-color);
+    color: var(--main-dark-color);
 }
 
 button.dark-bg{
@@ -97,6 +101,7 @@ button.dark-bg:hover, button.dark-bg:active, button.dark-bg:focus{
 
 /* Hero Section */
 #hero{
+    position: initial;
     justify-content: flex-end;
     align-items: center;
     align-content: flex-end;
@@ -124,14 +129,6 @@ button.dark-bg:hover, button.dark-bg:active, button.dark-bg:focus{
 #hero h1#logo, #hero h2#subtitle{
     margin-bottom: 0px;
 }
-
-/* Testimonials Section */
-#testimonials{
-    justify-content: flex-end;
-    align-items: center;
-    align-content: flex-end;
-}
-
 /* Product Slider Section */
 #product-slider{
     justify-content: flex-end;
@@ -144,7 +141,7 @@ button.dark-bg:hover, button.dark-bg:active, button.dark-bg:focus{
 .swiper {
     width: 100%;
     height: 100%;
-
+    
     padding: var(--default-space) 0px;
 }
 
@@ -268,3 +265,24 @@ button.dark-bg:hover, button.dark-bg:active, button.dark-bg:focus{
     padding: var(--double-space);
     width: 70vw;
 }
+
+/* Newsletter */
+#newsletter{
+    width: var(--default-inner-column-perc);
+    margin: auto;
+    align-items: center;
+}
+
+#newsletter input[type="email"]{
+    border: 0px solid transparent;
+    border-bottom: 1px solid var(--main-color);
+    outline: none;
+    margin-bottom: var(--half-space);
+}
+
+/* Strenght Section */
+#strenght-points{
+    
+}
+
+/* Animations */
