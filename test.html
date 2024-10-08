@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess Dev Test</title>
+
+  <!-- TODO: Add Favicon -->
+  <link rel="stylesheet" type="text/css" href="./css/index.css">
+  <script type="module" src="./js/index.js"></script>
+  <script type="module" src="./js/eventscroll.js"></script>
+
+  <!-- Fonts -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+  </style>
+
+
+  <!-- Implementing Swiper Library -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+  <div id="hero" class="flexbox dark-bg">
+    <video poster="./media/img/hero-placeholder.webp" playsinline="playsinline" muted="muted" loop="loop" autoplay>
+      <source src="./media/video/hero-video-mobile.mp4" type="video/mp4">
+    </video>
+    <h1 id="logo">LOGO</h1>
+    <h2 id="subtitle">Lorem ipsum</h2>
+    <button class="dark-bg">Shop now</button>
+  </div>
+  <div id="product-slider" class="flexbox section">
+    <h3>Lorem Ipsum</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium nisl ut velit pretium rhoncus.</p>
+
+    <swiper-container class="products-swiper" space-between="40" rewind="true" scrollbar="true">
+      <swiper-slide>
+        <div class="product">
+          <img src="./media/img/near-img.webp" loading="lazy" alt="" />
+          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+          <div class="flexbox product-attributes">
+            <div class="flexbox product-selector">
+              <span class="dot"></span>
+              <span class="dot red"></span>
+            </div>
+            <div class="flexbox product-info">
+              <h6 class="name">Lorem Ipsum</h6>
+              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="product">
+          <img src="./media/img/near-img.webp" loading="lazy" alt="" />
+          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+          <div class="flexbox product-attributes">
+            <div class="flexbox product-selector">
+              <span class="dot orange"></span>
+            </div>
+            <div class="flexbox product-info">
+              <h6 class="name">Lorem Ipsum</h6>
+              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="product">
+          <img src="./media/img/near-img.webp" loading="lazy" alt="" />
+          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+          <div class="flexbox product-attributes">
+            <div class="flexbox product-selector">
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="flexbox product-info">
+              <h6 class="name">Lorem Ipsum</h6>
+              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="product">
+          <img src="./media/img/near-img.webp" loading="lazy" alt="" />
+          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+          <div class="flexbox product-attributes">
+            <div class="flexbox product-selector">
+              <span class="dot blue"></span>
+            </div>
+            <div class="flexbox product-info">
+              <h6 class="name">Lorem Ipsum</h6>
+              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+        </div>
+      </swiper-slide>
+    </swiper-container>
+  </div>
+  <div id="testimonials" class="flexbox section">
+
+  </div>
+  <div id="categories-grid" class="flexbox section">
+
+  </div>
+  <div id="newsletter" class="flexbox section">
+
+  </div>
+  <!-- TODO: Lazy Loading -->
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".products-swiper", {
+      rewind: true,
+      spaceBetween: 40,
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: true,
+      }
+    });
+  </script>
+</body>
+
+</html>
