@@ -311,6 +311,9 @@ button.dark-bg:hover, button.dark-bg:active, button.dark-bg:focus{
     outline: none;
     margin-bottom: var(--half-space);
 }
+#newsletter input[type="email"]:active, #newsletter input[type="email"]:focus{
+    border-bottom: 1px solid rgba(0, 0, 0, .5);
+}
 
 /* Strenght Section */
 #strenght-points{
@@ -328,12 +331,21 @@ button.dark-bg:hover, button.dark-bg:active, button.dark-bg:focus{
     border: 2px solid var(--main-color);
     border-radius: 100%;
     margin: var(--half-space) auto;
+    transition: all 0.5s ease;
 }
 
+.icon:hover{
+    background-color: var(--main-color);
+}
 
 .icon img{
     max-width: 25px;
     height: 100%;
+    transition: all 0.5s ease;
+}
+
+.icon:hover img{
+    filter: invert(93%) sepia(94%) saturate(0%) hue-rotate(248deg) brightness(106%) contrast(106%);
 }
 
 h6.small-title{
@@ -361,6 +373,11 @@ h6.small-title{
     align-content: center;
 
     background-color: rgba(0, 0, 0, .5);
+
+    transition: all 0.5s ease;
+}
+.category .overlay:hover{
+    background-color: rgba(0, 0, 0, .2);
 }
 
 #cat-1{
@@ -374,6 +391,10 @@ h6.small-title{
 }
 #cat-4{
     background-image: url("../media/img/category-section-4.jpg");
+}
+
+#arrow{
+    
 }
 
 /* Desktop versions */
