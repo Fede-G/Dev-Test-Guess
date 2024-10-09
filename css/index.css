@@ -3,6 +3,8 @@
 *{
     --main-color: #000000;
     --main-dark-color: #ffffff;
+    --accent-color: #deb465;
+    --dark-accent-color: #b69d72;
 
     --default-space: 20px;
     --half-space: 10px;
@@ -292,6 +294,10 @@ button.dark-bg:hover, button.dark-bg:active, button.dark-bg:focus{
     width: 70vw;
 }
 
+#modal button{
+    border: 1px solid var(--main-color);
+}
+
 /* Newsletter */
 #newsletter{
     width: var(--default-inner-column-perc);
@@ -398,6 +404,21 @@ h6.small-title{
 /* --------------------------------- */
 
 /* ALT VERSION */
+#hero.alt #logo{
+    color: var(--accent-color);
+}
+
+#hero.alt button{
+    background-color: var(--accent-color);
+    color: var(--main-dark-color);
+    border-color: var(--accent-color);
+}
+
+#hero.alt button:hover{
+    background-color: var(--dark-accent-color);
+    border-color: var(--dark-accent-color);
+}
+
 #hero.alt > div{
     justify-content: center;
     align-items: flex-start;;
@@ -425,6 +446,11 @@ h6.small-title{
     transition-duration: 0.8s;
     transition-property: transform;
     margin: 0 0 var(--half-space) 0;
+    border-color: var(--accent-color);
+}
+
+#strenght-points.alt .icon img{
+    filter: invert(73%) sepia(76%) saturate(286%) hue-rotate(352deg) brightness(89%) contrast(94%);
 }
 
 #strenght-points.alt .strenght-point:hover .icon{
@@ -449,7 +475,7 @@ h6.small-title{
 }
 
 #faq-section.alt .faq-module {
-    border: 1px solid var(--main-color);
+    border: 0 solid var(--main-color);
 }
 
 @media screen and (min-width: 1080px) {
@@ -462,6 +488,7 @@ h6.small-title{
 
 #faq-section.alt .faq-title:after {
     content: "▼";
+    color: var(--accent-color);
     position: absolute;
     top: 50%;
     right: 10px;
@@ -491,11 +518,43 @@ h6.small-title{
 
 #newsletter.alt input[type="email"]{
     width: 100%;
+    transition: all 0.5s ease;
 }
 
 #categories-grid.alt .category .overlay{
     align-items: flex-start;
+    transition: all 0.5s ease;
 }
+#categories-grid.alt .category .overlay:hover{
+    background-color: rgba(222,180,101,.2);
+}
+
 #categories-grid.alt .category h3{
     margin: 0 0 0 var(--double-space);
+    color: var(--accent-color);
+}
+#categories-grid.alt .category .overlay:hover h3{
+    color: var(--main-dark-color);
+}
+
+#product-slider.alt .swiper-scrollbar-drag{
+    background: var(--accent-color);
+}
+
+#modal.alt h2{
+    color: var(--accent-color);
+}
+
+#modal.alt button:hover{
+    border-color: var(--dark-accent-color);
+}
+
+#newsletter.alt button:hover{
+    background-color: transparent;
+    border-color: var(--dark-accent-color);
+    color: var(--main-color);
+}
+
+#newsletter.alt input[type="email"]:focus{
+    border-color: #deb465;
 }
