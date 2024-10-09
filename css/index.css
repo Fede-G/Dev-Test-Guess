@@ -9,6 +9,7 @@
     --double-space: 40px;
 
     --default-inner-column-perc: 80%;
+    --smaller-inner-column-perc: 80%;
 
     position: relative;
 
@@ -154,9 +155,7 @@ button.dark-bg:hover, button.dark-bg:active, button.dark-bg:focus{
 
 /* Product Slider Section */
 #product-slider{
-    justify-content: flex-end;
     align-items: center;
-    align-content: flex-end;
     margin: 0 10%;
 }
 
@@ -256,7 +255,7 @@ button.dark-bg:hover, button.dark-bg:active, button.dark-bg:focus{
     opacity: 0%;
     height: 0px;
 }
-.faq-description.visibile{
+.faq-module.visibile .faq-description{
     visibility: visible;
     opacity: 100%;
     height: 100%;
@@ -317,8 +316,18 @@ button.dark-bg:hover, button.dark-bg:active, button.dark-bg:focus{
     margin: var(--default-space);
 }
 
+.icon{
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--main-color);
+    border-radius: 100%;
+    margin: var(--half-space) auto;
+}
+
+
 .icon img{
     max-width: 25px;
+    height: 100%;
 }
 
 h6.small-title{
@@ -359,4 +368,134 @@ h6.small-title{
 }
 #cat-4{
     background-image: url("../media/img/category-section-4.jpg");
+}
+
+/* Desktop versions */
+@media screen and (min-width: 1080px){
+    #strenght-points{
+        flex-direction: row;
+        row-gap: var(--double-space);
+        width: var(--smaller-inner-column-perc);
+        margin: auto;
+    }
+
+    .faq-module{
+        max-width: var(--smaller-inner-column-perc);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #categories-grid{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .category{
+        width: 50%;
+        height: 50vh;
+    }
+}
+
+/* --------------------------------- */
+
+/* ALT VERSION */
+#hero.alt > div{
+    justify-content: center;
+    align-items: flex-start;;
+    align-content: center;
+}
+#hero.alt .hero-space{
+    padding: 0;
+}
+
+#strenght-points.alt{
+    flex-direction: row;
+    row-gap: var(--double-space);
+    width: var(--smaller-inner-column-perc);
+    margin: auto;
+}
+
+#strenght-points.alt .strenght-point:first-of-type{
+    margin-left: 0;
+}
+#strenght-points.alt .strenght-point:last-of-type{
+    margin-right: 0;
+}
+
+#strenght-points.alt .icon{
+    transition-duration: 0.8s;
+    transition-property: transform;
+    margin: 0 0 var(--half-space) 0;
+}
+
+#strenght-points.alt .strenght-point:hover .icon{
+    transform: rotateY(360deg);
+}
+
+#product-slider.alt p, #faq-section.alt .faq-title, #faq-section.alt .faq-description, #newsletter.alt h3, #newsletter.alt label, #newsletter.alt input[type="email"],
+#strenght-points.alt .small-title, #strenght-points.alt p, #categories-grid.alt h3{
+    text-align: left;
+}
+#product-slider.alt, #faq-section.alt, #newsletter.alt{
+    align-items: flex-start;
+}
+
+#faq-section.alt{
+    width: var(--default-inner-column-perc);
+    margin: auto;
+}
+#faq-section.alt #faq-container{
+    width: 100%;
+    margin: 0;
+}
+
+#faq-section.alt .faq-module {
+    border: 1px solid var(--main-color);
+}
+
+@media screen and (min-width: 1080px) {
+    #faq-section.alt .faq-module{
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+#faq-section.alt .faq-title:after {
+    content: "▼";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    height: 20px;
+    width: 20px;
+    pointer-events: none;
+}
+
+#faq-section.alt .faq-module.visibile .faq-title:after{
+    content: "▲";
+}
+
+#newsletter.alt .accept-box{
+    display: flex;
+    align-items: flex-start;
+}
+
+#newsletter.alt input[type="checkbox"]{
+    margin-top: 2px;
+}
+
+#newsletter.alt label{
+    text-align: left;
+    margin-left: var(--half-space);
+}
+
+#newsletter.alt input[type="email"]{
+    width: 100%;
+}
+
+#categories-grid.alt .category .overlay{
+    align-items: flex-start;
+}
+#categories-grid.alt .category h3{
+    margin: 0 0 0 var(--double-space);
 }

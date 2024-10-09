@@ -1,17 +1,32 @@
 window.onload = function(){
+    const swiperEl = document.querySelector('swiper-container');
+    Object.assign(swiperEl, {
+        slidesPerView: 1,
+        breakpoints: {
+            640: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 40,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 50,
+            },
+        },
+    });
+    swiperEl.initialize();
+
     /* This is for FAQs visibility */
     const faq_array = document.querySelectorAll('.faq-module');
-    const faq_desc_array = document.querySelectorAll('.faq-description');
-    faq_array.forEach((faq, index) => {
-        const current_faq_desc = faq_desc_array[index];
-
+    faq_array.forEach(faq => {
         faq.addEventListener('click', function(){
-            if(current_faq_desc.classList.contains("hidden")){
-                current_faq_desc.classList.remove("hidden");
-                current_faq_desc.classList.add("visibile");
+            if(faq.classList.contains("visibile")){
+                faq.classList.remove("visibile");
             }else{
-                current_faq_desc.classList.remove("visibile");
-                current_faq_desc.classList.add("hidden");
+                faq.classList.add("visibile");
             }
         })
     });
@@ -44,7 +59,6 @@ window.onload = function(){
     function handleScroll() {
         const hero = document.querySelector('#hero');
         if (isInViewport(hero)) {
-            console.log(1-((hero.offsetHeight - hero.getBoundingClientRect().bottom) / hero.offsetHeight));
             hero.style.opacity = 1 - ((hero.offsetHeight - hero.getBoundingClientRect().bottom) / hero.offsetHeight);
         }
     }
