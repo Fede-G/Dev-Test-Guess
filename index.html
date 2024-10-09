@@ -25,15 +25,42 @@
 <body>
     <div id="hero" class="flexbox dark-bg">
         <video poster="./media/img/hero-placeholder.webp" playsinline="playsinline" muted="muted" loop="loop" autoplay>
-            <source src="./media/video/hero-video-mobile.mp4" type="video/mp4">
+            <source src="./media/video/hero-video-mobile.mp4" type="video/mp4" media="(max-width: 768px)">
+            <source src="./media/video/hero-video-desktop.mp4" type="video/mp4" media="(min-width: 768px)">
         </video>
-        <h1 id="logo">LOGO</h1>
-        <h2 id="subtitle">Lorem ipsum</h2>
-        <button class="open-modal-btn dark-bg">Open modal</button>
+        <div class="flexbox dark-bg">
+            <h1 id="logo">LOGO</h1>
+            <h2 id="subtitle">Lorem ipsum</h2>
+            <button class="open-modal-btn dark-bg">Open modal</button>
+            <div class="hero-space"></div>
+        </div>
+    </div>
+    <div id="strenght-points" class="flexbox section">
+        <div class="strenght-point">
+            <div class="icon">
+                <img src="./media/icons/icon1.svg" loading="lazy" alt=""/>
+            </div>
+            <h6 class="small-title">Lorem ipsum</h6>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="strenght-point">
+            <div class="icon">
+                <img src="./media/icons/icon2.svg" loading="lazy" alt=""/>
+            </div>
+            <h6 class="small-title">Lorem ipsum</h6>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="strenght-point">
+            <div class="icon">
+                <img src="./media/icons/icon3.svg" loading="lazy" alt=""/>
+            </div>
+            <h6 class="small-title">Lorem ipsum</h6>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
     </div>
     <div id="product-slider" class="flexbox section">
         <h3>Lorem Ipsum</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium nisl ut velit pretium rhoncus.</p>
+        <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium nisl ut velit pretium rhoncus.</p>
 
         <swiper-container class="swiper products-swiper" space-between="40" rewind="true" scrollbar="true">
             <swiper-slide>
@@ -101,9 +128,6 @@
             <div class="swiper-scrollbar"></div>
         </swiper-container>
     </div>
-    <div id="categories-grid" class="flexbox section">
-
-    </div>
     <div id="faq-section" class="flexbox section">
         <h3>FAQs</h3>
         <div id="faq-container">
@@ -125,6 +149,28 @@
             </div>
         </div>
     </div>
+    <div id="categories-grid" class="flexbox section">
+        <div id="cat-1" class="category">
+            <div class="overlay flexbox">
+                <h3>Lorem</h3>
+            </div>
+        </div>
+        <div id="cat-2" class="category">
+            <div class="overlay flexbox">
+                <h3>Lorem</h3>
+            </div>
+        </div>
+        <div id="cat-3" class="category">
+            <div class="overlay flexbox">
+                <h3>Lorem</h3>
+            </div>
+        </div>
+        <div id="cat-4" class="category">
+            <div class="overlay flexbox">
+                <h3>Lorem</h3>
+            </div>
+        </div>
+    </div>
     <div id="newsletter" class="flexbox section">
         <h3>Lorem ipsum</h3>
         <input type="email">
@@ -132,7 +178,7 @@
             <input type="checkbox">
             <label for="accept">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</label>
         </div>
-        <button class="close-modal-btn">Lorem</button>
+        <button class="">Lorem</button>
     </div>
     <div id="modal" class="flexbox">
         <div class="dialog flexbox">

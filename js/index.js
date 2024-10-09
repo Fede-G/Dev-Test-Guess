@@ -37,19 +37,16 @@ window.onload = function(){
 
     /* Dynamic Scroll */    
     function isInViewport(element) {
-        const elem_rect = element.getBoundingClientRect(); //instead of getting the top/bot you can use this
+        const elem_rect = element.getBoundingClientRect();
         return elem_rect.top <= window.innerHeight && elem_rect.bottom >= 0;
     }
 
     function handleScroll() {
-        const titles = document.querySelectorAll('h3');
-        titles.forEach(title => {
-            if (isInViewport(title)) {
-                title.classList.add("animated");
-            } else {
-                title.classList.remove("animated");
-            }
-        });
+        const hero = document.querySelector('#hero');
+        if (isInViewport(hero)) {
+            console.log(1-((hero.offsetHeight - hero.getBoundingClientRect().bottom) / hero.offsetHeight));
+            hero.style.opacity = 1 - ((hero.offsetHeight - hero.getBoundingClientRect().bottom) / hero.offsetHeight);
+        }
     }
     
     window.addEventListener('scroll', handleScroll);

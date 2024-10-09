@@ -34,7 +34,7 @@ body{
 }
 
 div.section{
-    padding: var(--double-space) 0px;
+    padding: var(--default-space) 0px;
 }
 
 /* Headings & Text */
@@ -69,6 +69,10 @@ p{
     margin-bottom: var(--half-space);
 }
 
+p.subtitle{
+    margin-bottom: var(--default-space);
+}
+
 .dark-bg *{
     color: var(--main-dark-color);
 }
@@ -81,7 +85,7 @@ button{
     border: 1.5px solid var(--main-color);
     margin: var(--default-space) 0px;
     cursor: pointer;
-    max-width: 20vw;
+    max-width: 50vw;
 
     transition: all 0.5s ease-in-out;
 }
@@ -101,6 +105,15 @@ button.dark-bg:hover, button.dark-bg:active, button.dark-bg:focus{
 
 /* Hero Section */
 #hero{
+    position: relative;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: flex-end;
+
+    height: 70vh;
+}
+
+#hero > div{
     position: initial;
     justify-content: flex-end;
     align-items: center;
@@ -110,13 +123,18 @@ button.dark-bg:hover, button.dark-bg:active, button.dark-bg:focus{
     margin: auto;
     
     height: 70vh;
+
 }
 
 #hero video{
-    z-index: -1;
     position: absolute;
     width: 100%;
+    height: 100%;
     object-fit: cover;
+}
+
+#hero :not(video){
+    z-index: 1;
 }
 
 #hero h1, #hero h3{
@@ -129,12 +147,21 @@ button.dark-bg:hover, button.dark-bg:active, button.dark-bg:focus{
 #hero h1#logo, #hero h2#subtitle{
     margin-bottom: 0px;
 }
+
+.hero-space{
+    padding: var(--default-space);
+}
+
 /* Product Slider Section */
 #product-slider{
     justify-content: flex-end;
     align-items: center;
     align-content: flex-end;
     margin: 0 10%;
+}
+
+.product img{
+    width: 100%;
 }
 
 /* Swiper */
@@ -282,7 +309,54 @@ button.dark-bg:hover, button.dark-bg:active, button.dark-bg:focus{
 
 /* Strenght Section */
 #strenght-points{
-    
+    align-items: center;
 }
 
-/* Animations */
+.strenght-point{
+    width: var(--default-inner-column-perc);
+    margin: var(--default-space);
+}
+
+.icon img{
+    max-width: 25px;
+}
+
+h6.small-title{
+    font-size: 1.1rem;
+    margin-bottom: 0px;
+}
+
+/* Categories */
+.category{
+    height: 25vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.category h3{
+    color: var(--main-dark-color);
+}
+
+.category .overlay{
+    width: 100%;
+    height: 100%;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    background-color: rgba(0, 0, 0, .5);
+}
+
+#cat-1{
+    background-image: url("../media/img/category-section-1.jpg");
+}
+#cat-2{
+    background-image: url("../media/img/category-section-2.jpg");
+}
+#cat-3{
+    background-image: url("../media/img/category-section-3.jpg");
+}
+#cat-4{
+    background-image: url("../media/img/category-section-4.jpg");
+}
